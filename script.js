@@ -14,13 +14,15 @@ async function createPromise(time){
     return promise;
 }
 
-let promises = Promise.any([
+let promises = [
     createPromise(1000), 
     createPromise(3000),
     createPromise(2000),
     createPromise(5000),
     createPromise(4000),
-]);
+];
+
+let promises = Promise.any(promises);
 //  prom.then((data)=>{
 //     output.innerHTML = data;
 
