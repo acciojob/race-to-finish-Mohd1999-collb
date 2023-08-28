@@ -14,7 +14,7 @@ async function createPromise(time){
     return promise;
 }
 
-let promises = [
+ promises = [
     createPromise(1000), 
     createPromise(3000),
     createPromise(2000),
@@ -22,10 +22,10 @@ let promises = [
     createPromise(4000),
 ];
 
-let promises = Promise.any(promises);
-//  prom.then((data)=>{
-//     output.innerHTML = data;
+let prom = Promise.any(promises);
+ prom.then((data)=>{
+    output.innerHTML = data;
 
-// });
+});
 
 
